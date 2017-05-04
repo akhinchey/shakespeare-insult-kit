@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Button from "./Button";
 
 var col1 = [
   'artless',
@@ -162,13 +162,45 @@ var col3 = [
 
 
 class App extends Component {
+  
+  constructor() {
+    super();
+    this.state = {
+      insult: "\"___\"",
+    }
+  }
+
+  updateInsult() {
+    var word1 = col1[Math.floor(Math.random() * col1.length)]
+    var word2 = col2[Math.floor(Math.random() * col2.length)]
+    var word3 = col3[Math.floor(Math.random() * col3.length)]
+
+    this.setState({
+      insult: "\"Thou" + " " + word1 + " " + word2 + " " + word3 + "!\"",
+    });
+  }
+
   render() {
     return (
       <div className="App">
         <h1>Shakespeare Insult Kit Online</h1>
+        <div>{this.state.insult}<p></p></div>
+        <Button updateInsult={this.updateInsult.bind(this)}/>
       </div>
     );
   }
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
