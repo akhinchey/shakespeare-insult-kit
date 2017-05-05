@@ -166,7 +166,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      insult: "\"___\"",
+      insult: "",
     }
   }
 
@@ -176,7 +176,7 @@ class App extends Component {
     var word3 = col3[Math.floor(Math.random() * col3.length)]
 
     this.setState({
-      insult: "\"Thou" + " " + word1 + " " + word2 + " " + word3 + "!\"",
+      insult: "\" Thou" + " " + word1 + ", " + word2 + " " + word3 + "! \"",
     });
   }
 
@@ -184,7 +184,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Shakespeare Insult Kit Online</h1>
-        <div>{this.state.insult}<p></p></div>
+        <div><h2 className="quote">{this.state.insult}</h2></div>
         <Button updateInsult={this.updateInsult.bind(this)}/>
       </div>
     );
