@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Italianno');
+/*@import url('https://fonts.googleapis.com/css?family=Italianno');*/
+
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
 
 .App {
   text-align: center;
@@ -6,7 +8,7 @@
 
 
 .quote {
-  font: 55pt 'Italianno', cursive;
+  font: 50pt 'Tangerine', cursive;
 }
 
 

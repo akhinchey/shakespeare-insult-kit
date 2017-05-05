@@ -176,7 +176,7 @@ class App extends Component {
     var word3 = col3[Math.floor(Math.random() * col3.length)]
 
     this.setState({
-      insult: "\"Thou" + " " + word1 + " " + word2 + " " + word3 + "!\"",
+      insult: "\" Thou" + " " + word1 + ", " + word2 + " " + word3 + "! \"",
     });
   }
 
